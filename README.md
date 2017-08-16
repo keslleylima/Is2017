@@ -1,2 +1,3 @@
 # is2017
-Repositório destinado ao armazenamento de conteúdos relacionados a disciplina Leitura de Software.
+
+Esse Repositório destinado ao armazenamento de conteúdos relacionados a disciplina _Leitura de Software_.
