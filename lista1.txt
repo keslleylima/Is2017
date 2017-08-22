@@ -1,0 +1,129 @@
+		KESLLEY LIMA DA SILVA 
+		Git (exercícios) 
+1.Qual o comando para obter a versão instalada do Git? 
+git version 
+
+2.Qual o efeito da execução de cada um dos comandos abaixo? 
+a.git config -l 
+O comando git config -l lista todos as configurações do úsuario em questão.  
+
+b.git mv a.txt b.txt 
+O comando é usado para renomear arquivos como a.txt para b.txt 
+ 
+c.git reset --hard 
+Reset os commit, passando a exibir o último commit 
+ 
+d.git log -27 
+Exibe os últimos 27 commits. 
+
+e.git help 
+Exibe os comandos e descreve a função de cada um. 
+
+f.git help reset 
+Abre o arquivo  em um nova guia sobre explicações,exemplos do git reset.
+ 
+g.git add --all 
+O arquivo é mandado para staging area e preparado para ser considerado  no próximo commit. 
+
+h.git add -u  
+Adiciona os arquivos editados e que são monitorados pelo  Git . 
+
+3.O fluxo “clássico” de interação com o Git é algo como “realizar trabalho em um ou mais arquivos e diretórios”, “acrescentá-los para serem contemplados” e, finalmente, executar um “commit”. Quais os comandos necessários para realizar os dois últimos “passos” desse fluxo? 
+Comandos para um arquivo ser acrescentado 
+Git add ... 
+Git rm ... 
+Git mv... 
+Executar um "commit" 
+Git commit... 
+
+4.Qual o comando deve ser executado para identificar o que foi alterado desde o último “commit”? 
+Git show comando usado para exibir o último commit.
+ 
+5.Em um dado repositório, arquivos simplesmente copiados para lá, ou seja, untracked, podem ser exibidos/identificados com que comando? 
+6.Git status 
+Qual o comando para efetuar um commit? 
+Git commit -m "comentário sobre produto". 
+
+7.Qual o comando que devemos empregar para descartar mudanças ocorridas no arquivo teste.txt, por exemplo? 
+Git checkout -- <arquivo>... 
+
+8.O que deve ser feito para que um determinado diretório do seu repositório seja ignorado pelo Git? 
+Deve criar um arquivo .gitignore  para que assim ele seja ignorado pelo Git. 
+
+9.O que acontece se o seu repositório local for removido? 
+Haverá a perda do Repositório Local. 
+10.Como clonar um repositório remoto? 
+Git clone
+ 
+11.Em alguns cenários git log pode produzir extensos resultados. Se houver interesse em visualizar o histórico de um repositório, onde cada mudança é fornecida exatamente em uma única linha, qual o comando que deve ser empregado? 
+git log --pretty=oneline
+ 
+12.Em qual arquivo o Git armazena informações de configuração empregadas por usuário? 
+Armazena no arquivo 
+ ~/.gitconfig 
+
+13.Qual o comando para criar um repositório local? 
+Criar uma nova pasta ,abra-a e execute o comando git init. 
+
+14.Qual o nome do diretório criado pelo Git quando se executa o comando git init? 
+O nome será o mesmo do repositório onde foi executado e endereço onde encontrar,como por exemplo , Reinitialized existing Git repository in C:/Users/keslley/Teste/.git/ 
+
+15.Qual o comando para adicionar todos os arquivos modificados? (Aqueles para os quais git status identificam como modified?) 
+Git add --all 
+
+16.O Git faz uso do valor de hash conhecido por SHA1. O que isto significa? Qual o propósito? O que é SHA1? 
+ Git tem seu checksum (valor para verificação de integridade) calculado antes que seja armazenado e então passa a ser referenciado pelo checksum. Isso significa que é impossível mudar o conteúdo de qualquer arquivo ou diretório sem que o Git tenha conhecimento.O mecanismo que o Git usa para fazer o checksum é chamado de hash SHA-1.O SHA-1 é uma string de 40 caracteres composta de caracteres hexadecimais (0-9 e a-f) que é calculado a partir do conteúdo de um arquivo ou estrutura de um diretório no Git. 
+
+17.Qual a palavra para indicar o último commit em vez do valor de hash SHA1 correspondente? 
+-abbrev-commit
+
+18.Quando se cria dois arquivos usando um editor de texto qualquer e, na sequência, executamos o comando git add -u, os dois arquivos criados passam de untracked para new file? 
+Não,pois git add -u adiciona os arquivos editados e que são monitorados pelo git. 
+
+19.Qual o efeito da execução dos dois comandos abaixo, nesta ordem, em um dado repositório? 
+git reset --soft HEAD~1 ,git reset --hard 
+git reset --soft HEAD~1 (volta ao último commit e mantém os últimos arquivos no Stage) 
+git reset --hard(exibe o úlitmo commit) 
+ 
+20.Após o emprego de um ambiente integrado de desenvolvimento (IDE), é comum a criação de arquivos e diretórios. Qual o comando que podemos empregar para remover arquivos e diretórios untracked? 
+Git clean -f 
+
+21.Qual o nome do arquivo no qual podemos inserir a indicação para o Git de arquivos e diretórios a serem ignorados? 
+arquivo .gitignore 
+
+22.Quando se cria o arquivo MinhaClasse.class em um dado diretório e desejamos que o Git ignore não apenas este, mas arquivos .class em geral, por todos os membros de uma equipe que estão contribuindo com um dado projeto? 
+Basta colocar *.class 
+
+23.jQuery é uma famose biblioteca em JavaScript. Consulte detalhes em http://jquery.com. O repositório Git correspondente encontra-se disponível em https://github.com/jquery/jquery.git. Faça o clone deste repositório jqueryrepo. 
+
+24.No repositório jqueryrepo, criado no passo anterior, qual o efeito do comando git shortlog -sne? 
+Exibe nome e email dos participantes.
+ 
+25.No repositório jqueryrepo, qual o efeito de git remote -v? 
+Exibe a URL remota do diretirio jqueryrepo. 
+
+26.Um repositório Git pode ser etiquetado ao longo do tempo. Ou seja, commits específicos podem ser “marcados” ou “etiquetados” para facilitar referências posteriores. Para listar todas as “etiquetas” (tags) estabelecidas para um dado repositório, qual comando deve ser executado? 
+Deve ser executado git tag para listar todas as tags 
+
+28.Caso um dato repositório retorne muitas “marcas” ou “etiquetas” para o comando git tag, como retornar apenas aquelas que atendem a determinado padrão, por exemplo, iniciadas por 2.0? 
+Git tag -a <nome> 
+
+29.Qual o efeito do comando git tag -a 3.4-gold -m “minha versão ouro”? 
+A partir do comando cria uma tag e armazena com a mensagem "minha versão ouro". 
+Após executado o comando acima, qual o efeito de git show 3.4-gold? 
+Após executado vai exibir os dados da tag junto com o commit. 
+
+30.O que o comando git push origin 3.4-gold teria como efeito? 
+O comando mostra a informação da pessoa que criou a tag, a data de quando o commit foi taggeado, e a mensagem antes de mostrar a informação do commit. 
+
+31.Após executar um commit, qual o efeito de git commit --amend? 
+Usado para simplesmente editar a mensagem de commit anterior sem alterar o seu instantâneo. Funde o antigo commit com o novo(o antigo com corre 
+
+32.Após executar git add x.txt, qual o efeito de git reset HEAD x.txt? 
+O git reset HEAD x.txt retira o arquivo x.txt da staging Area 
+
+33.Após alterar o conteúdo de um arquivo committed em passo anterior, qual o efeito do comando git checkout -- a.txt? 
+Descarta as mudanças ocorridas no arquivo. 
+
+34.Qual a diferença entre os comandos git reset HEAD x.txt e git checkout -- a.txt? 
+O git reset HEAD x.txt retira o arquivo x.txt da staging Area,já o git checkout -- a.txt descarta as mudanças feitas no arquivo
